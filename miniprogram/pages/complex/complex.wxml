@@ -1,0 +1,18 @@
+<van-button type="primary" bind:click="simple">简单查询</van-button>
+<van-button type="warning" bind:click="red">only red</van-button>
+<van-button type="danger" bind:click="lt">lt 50</van-button>
+<van-button type="primary" bind:click="in">in 4-11</van-button>
+<van-button type="primary" bind:click="and">price 20到50之间</van-button>
+<van-button type="danger" bind:click="limit">limit</van-button>
+<van-button type="warning" bind:click="orderBy">orderBy</van-button>
+<van-button type="primary" bind:click="count">{{count}}</van-button>
+<block wx:for="{{products}}" wx:key="_id">
+<van-card
+  price="{{item.price}}"
+  desc="{{item.color}}"
+  title="{{item.title}}"
+  thumb="{{item.image}}"
+  data-id="{{item._id}}"
+  bindtap="click"
+/>
+</block>
